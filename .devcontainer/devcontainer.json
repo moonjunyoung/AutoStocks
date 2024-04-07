@@ -12,7 +12,8 @@
         "vscode": {
           "extensions": [
             "ms-python.black-formatter"
-        ]
+        ],
+        "settings": {"terminal.integrated.defaultProfile.linux": "zsh"}
       }
     // "remoteUser": "root" 
    }
