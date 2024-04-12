@@ -1,12 +1,6 @@
 {
     "name" :  "AutoStocks" , 
-    "image" :  "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye" , 
-    "runArgs" :  [ 
-     "--name=dev-container-AutoStocks" ,  
-     "--volume=AutoStocks:/AutoStocks" 
-    //  "--network=AutoStocks"  
-    ],
- 
+    "image" :  "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye" ,
     "postCreateCommand": "pip install --no-cache-dir -r requirements.txt",
     "customizations": {
         "vscode": {
