@@ -5,6 +5,7 @@ from fastapi.templating import Jinja2Templates
 
 import subprocess
 import sys
+app = FastAPI()
 
 def install(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
@@ -21,7 +22,7 @@ for package in required_packages:
         print("Installing {}...".format(package))
         install(package)
 
-app = FastAPI()
+
 
 # HTML 파일 경로
 html_file = "./templates/index.html"
@@ -65,7 +66,7 @@ async def post_ui_card(request: Request, company_name: str = Form(...)): # 종�
     print(company_name)
     # from get_code import save_all_company_info_to_json
     # await save_all_company_info_to_json()
-    from get_code import get_company_info
+    from service.get_code import get_company_info
     company_info = await get_company_info(company_name)
 
     sell_orders = []
