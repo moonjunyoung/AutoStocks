@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>K&M.INC</title>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="static/images/logos/logo.png"
+    />
+    <link rel="stylesheet" href="static/css/styles.min.css" />
+  </head>
+
+  <body>
+    <!--  Body Wrapper -->
+    <div
+      class="page-wrapper"
+      id="main-wrapper"
+      data-layout="vertical"
+      data-navbarbg="skin6"
+      data-sidebartype="full"
+      data-sidebar-position="fixed"
+      data-header-position="fixed"
+    >
+      <div
+        class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center"
+      >
+        <div class="d-flex align-items-center justify-content-center w-100">
+          <div class="row justify-content-center w-100">
+            <div class="col-md-8 col-lg-6 col-xxl-3">
+              <div class="card mb-0">
+                <div class="card-body">
+                  <a
+                    href="./index"
+                    class="text-nowrap logo-img text-center d-block py-3 w-100"
+                  >
+                    <img
+                      src="static/images/logos/logo.png"
+                      width="180"
+                      alt=""
+                    />
+                  </a>
+                  <p class="text-center">한국투자증권 api를 설정합니다.</p>
+                  <form action="/register" method="post">
+                    <!-- 입력 폼 -->
+                    <div class="mb-3">
+                      <label for="cano" class="form-label">계좌번호</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="cano"
+                        name="cano"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="app_key" class="form-label">App Key</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="app_key"
+                        name="app_key"
+                      />
+                    </div>
+                    <div class="mb-4">
+                      <label for="app_secret" class="form-label"
+                        >App Secret</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="app_secret"
+                        name="app_secret"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2"
+                    >
+                      등록하기
+                    </button>
+
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <p class="fs-4 mb-0 fw-bold">API발급 이전이신가요?</p>
+                      <a
+                        class="text-primary fw-bold ms-2"
+                        href="https://securities.koreainvestment.com/main/customer/systemdown/RestAPIService.jsp"
+                        >한국투자증권 api발급받기</a
+                      >
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="static/libs/jquery/dist/jquery.min.js"></script>
+    <script src="static/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 폼 제출 전 `id_token`을 숨겨진 필드로 추가 -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 폼 제출 이벤트 리스너 추가
+        document
+          .querySelector("form")
+          .addEventListener("submit", function (event) {
+            // 로컬 스토리지에서 `id_token` 가져오기
+            const idToken = localStorage.getItem("id_token");
+
+            // `id_token`이 존재하는 경우 폼에 숨겨진 필드로 추가
+            if (idToken) {
+              const hiddenInput = document.createElement("input");
+              hiddenInput.type = "hidden";
+              hiddenInput.name = "id_token";
+              hiddenInput.value = idToken;
+              this.appendChild(hiddenInput);
+            }
+          });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>K&M.INC</title>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="static/images/logos/logo.png"
+    />
+    <link rel="stylesheet" href="static/css/styles.min.css" />
+  </head>
+
+  <body>
+    <!-- Body Wrapper -->
+    <div
+      class="page-wrapper"
+      id="main-wrapper"
+      data-layout="vertical"
+      data-navbarbg="skin6"
+      data-sidebartype="full"
+      data-sidebar-position="fixed"
+      data-header-position="fixed"
+    >
+      <div
+        class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center"
+      >
+        <div class="d-flex align-items-center justify-content-center w-100">
+          <div class="row justify-content-center w-100">
+            <div class="col-md-8 col-lg-6 col-xxl-3">
+              <div class="card mb-0">
+                <div class="card-body">
+                  <a
+                    href="./index"
+                    class="text-nowrap logo-img text-center d-block py-3 w-100"
+                  >
+                    <img
+                      src="static/images/logos/logo.png"
+                      width="180"
+                      alt=""
+                    />
+                  </a>
+                  <p class="text-center">원하는 로그인 방법을 선택해주세요.</p>
+                  <button
+                    type="button"
+                    id="kakao-login-btn"
+                    class="btn w-100 py-8 fs-4 mb-4 rounded-2"
+                    style="background-color: #ffd323; color: black"
+                    onclick="loginWithKakao()"
+                  >
+                    카카오로 로그인하기
+                  </button>
+                  <p id="token-result"></p>
+
+                  <form>
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-4"
+                    >
+                      <div class="form-check">
+                        <input
+                          class="form-check-input primary"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckChecked"
+                          checked
+                        />
+                        <label
+                          class="form-check-label text-dark"
+                          for="flexCheckChecked"
+                        >
+                          Remember this Device
+                        </label>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    ></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.1/kakao.min.js"
+      integrity="sha384-kDljxUXHaJ9xAb2AzRd59KxjrFjzHa5TAoFQ6GbYTCAG0bjM55XohjjDT7tDDC01"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // 카카오 JavaScript SDK 초기화
+      Kakao.init("621f697cc6fc7b1600944c0e75f852f0"); // 사용하려는 앱의 JavaScript 키 입력
+
+      // 로그인 기능
+      function loginWithKakao() {
+        // 카카오 인증 요청
+        Kakao.Auth.authorize({
+          redirectUri: "http://hingurrr.shop:8000/kakao_auth",
+        });
+      }
+
+      // 페이지 로드 시 토큰 확인 후 메시지 보내는 함수 호출
+      document.addEventListener("DOMContentLoaded", function () {
+        // 페이지 로드 시에 초기화 동작을 추가할 수 있습니다.
+      });
+    </script>
+
+    <script src="static/libs/jquery/dist/jquery.min.js"></script>
+    <script src="static/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

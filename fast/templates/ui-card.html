@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>K&M.INC</title>
+  <link rel="shortcut icon" type="image/png" href="static/images/logos/logo.png" />
+  <link rel="stylesheet" href="static/css/styles.min.css" />
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div>
+        <div class="brand-logo d-flex align-items-center justify-content-between">
+          <a href="./index" class="text-nowrap logo-img">
+            <img src="static/images/logos/logo.png" width="180" alt="" />
+          </a>
+          <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+            <i class="ti ti-x fs-8"></i>
+          </div>
+        </div>
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+          <ul id="sidebarnav">
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Home</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./index" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                <span class="hide-menu">홈화면</span>
+              </a>
+            </li>
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">UI COMPONENTS</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./ui-buttons" aria-expanded="false">
+                <span>
+                  <i class="ti ti-article"></i>
+                </span>
+                <span class="hide-menu">주문변경</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./ui-alerts" aria-expanded="false">
+                <span>
+                  <i class="ti ti-alert-circle"></i>
+                </span>
+                <span class="hide-menu">거래내역</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./ui-card" aria-expanded="false">
+                <span>
+                  <i class="ti ti-cards"></i>
+                </span>
+                <span class="hide-menu">종목설정</span>
+              </a>
+            </li>
+            
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">AUTH</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./authentication-login" aria-expanded="false">
+                <span>
+                  <i class="ti ti-login"></i>
+                </span>
+                <span class="hide-menu">Login</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./authentication-register" aria-expanded="false">
+                <span>
+                  <i class="ti ti-file-description"></i>
+                </span>
+                <span class="hide-menu">초기설정</span>
+              </a>
+            </li>
+            
+          <div class="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded">
+           
+          </div>
+        </nav>
+        <!-- End Sidebar navigation -->
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+      <!--  Header Start -->
+      <header class="app-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <ul class="navbar-nav">
+            <li class="nav-item d-block d-xl-none">
+              <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                <i class="ti ti-bell-ringing"></i>
+                <div class="notification bg-primary rounded-circle"></div>
+              </a>
+            </li>
+          </ul>
+          <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+            <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+              <li class="nav-item dropdown">
+                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <img src="static/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                  <div class="message-body">
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-user fs-6"></i>
+                      <p class="mb-0 fs-3">My Profile</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-mail fs-6"></i>
+                      <p class="mb-0 fs-3">My Account</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-list-check fs-6"></i>
+                      <p class="mb-0 fs-3">My Task</p>
+                    </a>
+                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!--  Header End -->
+      <div class="container-fluid">
+        <div class="alert alert-success" role="alert" id="alertMessage" style="display: none;">
+          
+        </div>
+        
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-4">
+                  <button type="button" onclick="loadStockInfo()" class="btn btn-outline-success mb-4">종목정보 갱신하기</button>
+                  <h5 class="card-title fw-semibold mb-4">종목설정 </h5>
+                  
+                  <!-- 매수 카드 -->
+
+                  <div class="card">
+                    <div class="card-header">
+                      <label for="buy_code">종목명</label>
+                      <input type="text" id="buy_code" name="buy_code" class="form-control"
+                        placeholder="종목명을 입력하세요">
+                      <form id="buy_form" action="/buy" method="post">
+                        <input type="hidden" id="buy_code_hidden" name="company_name" value="">
+                        <button type="button" onclick="submitForm()" class="btn btn-info mt-2">조회</button>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- 매수 카드 끝 -->
+                </div>
+
+                <div class="col-md-4" id="stockSelection" style="display: none;">
+                  <h5 class="card-title fw-semibold mb-4">종목선택</h5>
+                  
+                  <!-- 매도 카드 -->
+                  {% for sell_order in sell_orders %}
+                  <div class="card">
+                    <div class="card-header">
+                      
+                      <a href="{{ sell_order.url }}" class="btn btn-primary">종목명 : {{ sell_order.company_name }}</a>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">종목코드 : {{ sell_order.code }}</h5>
+                      <h5 class="card-title">현재가격 : {{ sell_order.price }}</h5>
+
+                      <!-- 트레이딩뷰 차트 추가 -->
+                      <div id="tv_chart_container_{{ sell_order.code }}" style="width: 120%; height: 120%; margin-left: -10%;"></div>
+
+
+                      <a href="{{ sell_order.url }}" class="btn btn-outline-danger m-1">전액 시장가매수</a>
+                      <a href="{{ sell_order.url }}" class="btn btn-outline-success m-1">분할 매수</a>
+                    </div>
+                  </div>
+                  {% endfor %}
+                  <!-- 매도 카드 끝 -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function loadStockInfo() {
+    try {
+        const response = await fetch('/api/save_company_info', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const data = await response.json();
+
+        // 응답을 확인하고 메시지를 표시합니다.
+        if (data.message === "Company information saved successfully") {
+            alert("업데이트 성공");
+        } else {
+            console.log(data);
+        }
+    } catch (error) {
+        console.error('회사 정보 저장 요청 실패:', error);
+    }
+}
+
+    function submitForm() {
+      // 사용자가 입력한 종목코드 가져오기
+      var company_name = document.getElementById('buy_code').value;
+      // form 엘리먼트 찾기
+      var form = document.getElementById('buy_form');
+      // form의 code input 엘리먼트 찾기
+      var company_nameInput = form.querySelector('input[name="company_name"]');
+      // code input 엘리먼트의 값을 사용자가 입력한 값으로 설정
+      company_nameInput.value = company_name;
+      // form 제출
+      form.submit();
+      
+      // 알림 메시지 표시
+      
+    }
+
+    // 트레이딩뷰 차트 렌더링 함수
+    function renderTradingViewChart(symbol, containerId) {
+      new TradingView.widget(
+        {
+          "autosize": true,
+          "symbol": symbol,
+          "interval": "1",
+          "timezone": "exchange",
+          "theme": "dark",
+          "style": "1",
+          "locale": "kr",
+          "toolbar_bg": "#f1f3f6",
+          "enable_publishing": false,
+          "hide_legend": true,
+          "container_id": containerId,
+        }
+      );
+    }
+    
+
+    // 트레이딩뷰 차트 렌더링
+    {% for sell_order in sell_orders %}
+    renderTradingViewChart("KRX:{{ sell_order.code }}", "tv_chart_container_{{ sell_order.code }}");
+    {% endfor %}
+    
+    var alertMessage = "";
+    {% for sell_order in sell_orders %}
+    alertMessage += "* {{ sell_order.company_name }} [{{ sell_order.code }}]<br>";
+    {% endfor %}
+    // alertMessage가 비어있지 않을 경우에만 알림 메시지를 표시
+    if (alertMessage !== "") {
+        document.getElementById('stockSelection').style.display = 'block';
+        document.getElementById('alertMessage').style.display = 'block';
+        document.getElementById('alertMessage').innerHTML = alertMessage;
+        var plainAlertMessage = alertMessage.replace(/<br>/g, '\n');
+        alert(plainAlertMessage);
+
+        // 3초 후 알림 메시지 숨김
+        setTimeout(function() {
+            document.getElementById('alertMessage').style.display = 'none';
+        }, 10000);
+    }
+
+        // 분할 매수 버튼 요소를 찾습니다.
+    const splitPurchaseButton = document.querySelector('.btn-outline-success');
+
+    // 분할 매수 버튼을 클릭할 때 실행할 함수를 정의합니다.
+    function handleSplitPurchaseClick(event) {
+        // 버튼 클릭 시 기본 동작을 방지합니다.
+        event.preventDefault();
+
+        // Web Authentication API를 사용하여 지문 인식을 실행합니다.
+        if (navigator.credentials && navigator.credentials.get) {
+            const options = {
+                publicKey: {
+                    // 챌린지 값은 적절한 값으로 설정합니다.
+                    challenge: new Uint8Array([/* 랜덤 값으로 초기화 */]),
+                    allowCredentials: [],
+                    userVerification: 'required' // 지문 인식을 요구합니다.
+                }
+            };
+
+            // 지문 인식 요청을 수행합니다.
+            navigator.credentials.get(options)
+                .then((credential) => {
+                    // 지문 인식이 성공한 경우 이곳에서 처리할 수 있습니다.
+                    console.log('지문 인식 성공:', credential);
+                    // 이후의 로직은 필요 시 여기에 추가합니다.
+                })
+                .catch((error) => {
+                    // 지문 인식이 실패한 경우 이곳에서 처리할 수 있습니다.
+                    console.error('지문 인식 실패:', error);
+                });
+        } else {
+            console.error('Web Authentication API를 지원하지 않습니다.');
+        }
+    }
+
+    // 분할 매수 버튼에 이벤트 리스너를 추가합니다.
+    splitPurchaseButton.addEventListener('click', handleSplitPurchaseClick);
+
+  </script>
+  <script src="static/libs/jquery/dist/jquery.min.js"></script>
+  <script src="static/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="static/js/sidebarmenu.js"></script>
+  <script src="static/js/app.min.js"></script>
+  <script src="static/libs/simplebar/dist/simplebar.js"></script> 
+</body>
+
+</html>

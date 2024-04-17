@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K&M.INC</title>
+    <link rel="stylesheet" href="/static/css/styles.min.css">
+    <style>
+        /* 긴 텍스트 줄바꿈을 위해 word-wrap 적용 */
+        .break-word {
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card mt-5">
+            <div class="card-body text-center break-word">
+                <h3>등록이 완료되었습니다.</h3>
+                <p>계좌번호: {{ cano }}</p>
+                <p>App Key: {{ app_key }}</p>
+                <p>App Secret: {{ app_secret }}</p>
+                <a href="/index" class="btn btn-primary mt-3">홈으로 돌아가기</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
